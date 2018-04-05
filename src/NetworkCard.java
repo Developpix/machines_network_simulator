@@ -20,7 +20,6 @@ public class NetworkCard {
     public NetworkCard(int hisID) {
 
         this.id = hisID;
-        this.hisNetwork = 0;
         this.connected = false;
 
     }
