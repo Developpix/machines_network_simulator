@@ -10,6 +10,7 @@ import networks.Network;
 public class NetworkCard {
 
     private int id;
+    private boolean connected;
     private Machine hisMachine;
     private Network hisNetwork;
 
@@ -20,6 +21,7 @@ public class NetworkCard {
 
         this.id = hisID;
         this.hisNetwork = 0;
+        this.connected = false;
 
     }
 
@@ -49,6 +51,7 @@ public class NetworkCard {
     public void connect(Network theNetwork) {
 
         this.hisNetwork = theNetwork;
+        this.connected = true;
 
     }
 
@@ -56,7 +59,7 @@ public class NetworkCard {
     */
     public void disconnect() {
 
-        this.hisNetwork = 0;
+        this.connected = false;
 
     }
 
@@ -66,6 +69,15 @@ public class NetworkCard {
     public Network getNetwork() {
 
         return this.hisNetwork;
+
+    }
+
+    /** Method to see if the network's card is connected to a network.
+    @return true if it was connected and false if not.
+    */
+    public boolean getConnected() {
+
+        return this.connected;
 
     }
 
