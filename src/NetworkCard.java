@@ -14,24 +14,13 @@ public class NetworkCard {
     private Machine hisMachine;
     private Network hisNetwork;
 
-    /** First constructor for the NetworkCard's class.
+    /** Constructor for the NetworkCard's class.
     @param hisID a unique ID for the card.
     */
     public NetworkCard(int hisID) {
 
         this.id = hisID;
         this.connected = false;
-
-    }
-
-    /** Second constructor for the NetworkCard's class.
-    @param hisID a unique ID for the card.
-    @param theMachine the machine which contains the network's card.
-    */
-    public NetworkCard(int hisID, Machine theMachine) {
-
-        this(hisID);
-        this.hisMachine = theMachine;
 
     }
 
@@ -85,7 +74,7 @@ public class NetworkCard {
 	*/
 	public String toString() {
 
-		return "Network's card:\n\tID -> " + this.id + "\n" + "\n\tIs connected -> " + this.connected;
+		return "Network's card:\n\tID -> " + this.id + "\n\tIs connected -> " + this.connected;
 
     }
 

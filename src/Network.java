@@ -55,6 +55,7 @@ public class Network {
         if (this.hisNetworkCards.size() <= 2) {
 
             this.hisNetworkCards.add(theNetworkCard);
+            theNetworkCard.connect(this);
 
             return true;
 
@@ -102,7 +103,7 @@ public class Network {
 
 		for (int i = 0; i < this.hisNetworkCards.size(); i++) {
 
-			chaine += "\tNetwork's card n°" + (i+1) + this.hisNetworkCards.get(i) + "\n";
+			chaine += "\tNetwork's card n°" + (i+1) + "\n\t" + this.hisNetworkCards.get(i) + "\n";
 
 		}
 
