@@ -52,7 +52,7 @@ public class Network {
     */
     public boolean addNetworkCard(NetworkCard theNetworkCard) {
 
-        if (this.hisNetworkCards <= 2) {
+        if (this.hisNetworkCards.size() <= 2) {
 
             this.hisNetworkCards.add(theNetworkCard);
 
