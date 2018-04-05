@@ -30,7 +30,11 @@ public class Machine {
 	public Machine(int hisNumber, ArrayList<NetworkCard> listOfNetworkCards) {
 
 		this.number = hisNumber;
-		this.hisNetworkCards = listOfNetworkCards;
+		for (int i = 0; i < listOfNetworkCards.size(); i++) {
+
+			this.addNetworkCard(listOfNetworkCards.get(i));
+
+		}
 
 	}
 
