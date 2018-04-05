@@ -87,7 +87,7 @@ public class Network {
     @param networkCardNumber the number of the network connected.
     @return the network's card connected.
     */
-    public int getNumberNetworkCards(int networkCardNumber) {
+    public NetworkCard getNumberNetworkCards(int networkCardNumber) {
 
         return this.hisNetworkCards.get(networkCardNumber);
 
