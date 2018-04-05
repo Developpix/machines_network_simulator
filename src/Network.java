@@ -93,4 +93,21 @@ public class Network {
 
     }
 
+    /** Method to convert the network in a string.
+	@return the string that represent the network.
+	*/
+	public String toString() {
+
+		String chaine = "Network:\n\tNumber -> " + this.number + "\n";
+
+		for (int i = 0; i < this.hisNetworkCards.size(); i++) {
+
+			chaine += "\tNetwork's card n°" + (i+1) + this.hisNetworkCards.get(i) + "\n";
+
+		}
+
+		return chaine;
+
+	}
+
 }

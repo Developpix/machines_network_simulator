@@ -80,4 +80,13 @@ public class NetworkCard {
 
     }
 
+    /** Method to convert the network's card in a string.
+	@return the string that represent the network's card.
+	*/
+	public String toString() {
+
+		return "Network's card:\n\tID -> " + this.id + "\n" + "\n\tIs connected -> " + this.connected;
+
+    }
+
 }

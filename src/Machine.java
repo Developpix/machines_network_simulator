@@ -76,4 +76,21 @@ public class Machine {
 
 	}
 
+	/** Method to convert the machine in a string.
+	@return the string that represent the machine.
+	*/
+	public String toString() {
+
+		String chaine = "Machine:\n\tNumber -> " + this.number + "\n";
+
+		for (int i = 0; i < this.hisNetworkCards.size(); i++) {
+
+			chaine += "\tNetwork's card n°" + (i+1) + this.hisNetworkCards.get(i) + "\n";
+
+		}
+
+		return chaine;
+
+	}
+
 }
