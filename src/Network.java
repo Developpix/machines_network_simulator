@@ -11,7 +11,7 @@ import cards.NetworkCard;
 public abstract class Network {
 
     private int number;
-    private ArrayList<NetworkCard> hisNetworkCards;
+    protected ArrayList<NetworkCard> hisNetworkCards;
 
     /** Constructor for the Network's class.
     @param hisNumber a number for the network.
