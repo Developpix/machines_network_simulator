@@ -6,9 +6,9 @@ import cards.NetworkCard;
 
 /** A class to create a network to connect 2 network's cards.
 @author Developpix
-@version 0.2
+@version 0.3
 */
-public class Network {
+public abstract class Network {
 
     private int number;
     private ArrayList<NetworkCard> hisNetworkCards;
@@ -68,6 +68,11 @@ public class Network {
         return this.hisNetworkCards.get(networkCardNumber);
 
     }
+
+    /** Method to get the maximum number of network's card connected.
+    @return the maximum number of network's card which can be connected.
+    */
+    public abstract int getMaxNumberOfNetworkCard();
 
     /** Method to convert the network in a string.
 	@return the string that represent the network.
