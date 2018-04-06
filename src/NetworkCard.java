@@ -5,7 +5,7 @@ import networks.Network;
 
 /** A class to create a network's card.
 @author Developpix
-@version 0.1
+@version 0.2
 */
 public class NetworkCard {
 
@@ -38,8 +38,16 @@ public class NetworkCard {
     */
     public void connect(Network theNetwork) {
 
-        this.hisNetwork = theNetwork;
-        this.connected = true;
+        if (theNetwork.addNetworkCard(this)) {
+
+            this.hisNetwork = theNetwork;
+            this.connected = true;
+
+            return true;
+
+        };
+
+        return false;
 
     }
 
@@ -47,6 +55,7 @@ public class NetworkCard {
     */
     public void disconnect() {
 
+        this.hisNetwork.removeNetworkCard(this);
         this.connected = false;
 
     }
