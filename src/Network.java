@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import cards.NetworkCard;
 
-/** A class to create a network to connect 2 network's cards.
+/** A class to create a network to connect network's cards.
 @author Developpix
 @version 0.4
 */
