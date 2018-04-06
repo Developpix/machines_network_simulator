@@ -1,10 +1,6 @@
 package networks;
 
-import java.util.ArrayList;
-
-import cards.NetworkCard;
-
-/** A class to create a network to connect 2 network's cards.
+/** A class to create a bluetooth network to connect 2 network's cards.
 @author Developpix
 @version 0.1
 */
