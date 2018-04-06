@@ -35,8 +35,9 @@ public class NetworkCard {
 
     /** Method to connect the network's card to a network.
     @param theNetwork the network to connect.
+    @return true if the network's card was connected to the network and false if not.
     */
-    public void connect(Network theNetwork) {
+    public boolean connect(Network theNetwork) {
 
         if (theNetwork.addNetworkCard(this)) {
 
