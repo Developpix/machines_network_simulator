@@ -42,7 +42,7 @@ public class Network {
     }
 
     /** Method to remove a network's card from the network.
-    @param networkCardNumber the network card that will be removed.
+    @param theNetworkCard the network card that will be removed.
     */
     public void removeNetworkCard(NetworkCard theNetworkCard) {
 
