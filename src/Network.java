@@ -6,7 +6,7 @@ import cards.NetworkCard;
 
 /** A class to create a network to connect 2 network's cards.
 @author Developpix
-@version 0.3
+@version 0.4
 */
 public abstract class Network {
 
@@ -29,7 +29,7 @@ public abstract class Network {
     */
     public boolean addNetworkCard(NetworkCard theNetworkCard) {
 
-        if (this.hisNetworkCards.size() <= 2) {
+        if (this.hisNetworkCards.size() <= this.getMaxNumberOfNetworkCard()) {
 
             this.hisNetworkCards.add(theNetworkCard);
 
