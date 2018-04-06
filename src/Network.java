@@ -6,43 +6,20 @@ import cards.NetworkCard;
 
 /** A class to create a network to connect 2 network's cards.
 @author Developpix
-@version 0.1
+@version 0.2
 */
 public class Network {
 
     private int number;
     private ArrayList<NetworkCard> hisNetworkCards;
 
-    /** First constructor for the Network's class.
+    /** Constructor for the Network's class.
     @param hisNumber a number for the network.
     */
     public Network(int hisNumber) {
 
         this.number = hisNumber;
         this.hisNetworkCards = new ArrayList();
-
-    }
-
-    /** Second constructor for the Network's class.
-    @param hisNumber a number for the network..
-    @param theFirstNetworkCard the first network's card contained in the network.
-    */
-    public Network(int hisNumber, NetworkCard theFirstNetworkCard) {
-
-        this(hisNumber);
-        this.hisNetworkCards.add(theFirstNetworkCard);
-
-    }
-
-    /** Third constructor for the Network's class.
-    @param hisNumber a number for the network..
-    @param theFirstNetworkCard the first network's card contained in the network.
-    @param theSecondNetworkCard the second network's card contained in the network.
-    */
-    public Network(int hisNumber, NetworkCard theFirstNetworkCard, NetworkCard theSecondNetworkCard) {
-
-        this(hisNumber, theFirstNetworkCard);
-        this.hisNetworkCards.add(theSecondNetworkCard);
 
     }
 
@@ -55,7 +32,6 @@ public class Network {
         if (this.hisNetworkCards.size() <= 2) {
 
             this.hisNetworkCards.add(theNetworkCard);
-            theNetworkCard.connect(this);
 
             return true;
 
@@ -66,12 +42,11 @@ public class Network {
     }
 
     /** Method to remove a network's card from the network.
-    @param networkCardNumber the number of the network card which be removed.
+    @param networkCardNumber the network card that will be removed.
     */
-    public void removeNetworkCard(int networkCardNumber) {
+    public void removeNetworkCard(NetworkCard theNetworkCard) {
 
-        this.hisNetworkCards.get(networkCardNumber).disconnect();
-        this.hisNetworkCards.remove(networkCardNumber);
+        this.hisNetworkCards.remove(theNetworkCard);
 
     }
 
