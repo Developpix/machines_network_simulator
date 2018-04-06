@@ -1,5 +1,4 @@
 A project to create a simulator of machine's network.
-
 ==============================================================================================
 
 A short description of the project.
