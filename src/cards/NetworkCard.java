@@ -1,6 +1,7 @@
 package cards;
 
 import machines.Machine;
+import networks.Network;
 
 /** A class to create a network's card.
 @author Developpix
@@ -28,6 +29,8 @@ public abstract class NetworkCard {
         this.hisMachine = theMachine;
 
     }
+    
+    public abstract boolean connect(Network theNetwork);
 
     /** Method to convert the network's card in a string.
 	@return the string that represent the network's card.

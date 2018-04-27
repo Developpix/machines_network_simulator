@@ -1,7 +1,7 @@
 package cards;
 
-import machines.Machine;
 import networks.BluetoothNetwork;
+import networks.Network;
 
 /** A class to create a bluetooth network's card.
 @author Developpix
@@ -26,16 +26,16 @@ public class BluetoothNetworkCard extends NetworkCard {
     @param theNetwork the network to connect.
     @return true if the network's card was connected to the network and false if not.
     */
-    public boolean connect(BluetoothNetwork theNetwork) {
+    public boolean connect(Network theNetwork) {
 
-        if (theNetwork.addNetworkCard(this)) {
-
-            this.hisNetwork = theNetwork;
+    	if (theNetwork instanceof BluetoothNetwork && theNetwork.addNetworkCard(this)) {
+	
+            this.hisNetwork = (BluetoothNetwork)theNetwork;
             this.connected = true;
 
             return true;
-
-        };
+	
+	    }
 
         return false;
 
